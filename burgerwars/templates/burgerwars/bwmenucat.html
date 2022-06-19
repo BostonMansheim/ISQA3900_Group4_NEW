@@ -28,9 +28,9 @@
 <nav>
     <div class="logoa"><h1>Burger Wars </h1></div>
     <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="bwmenucat.html">Menu</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="{% url 'burgerwars:home' %}">Home</a></li>
+        <li><a href="{% url 'burgerwars:bwmenucat' %}">Menu</a></li>
+        <li><a href="{% url 'burgerwars:about' %}">About</a></li>
         <li><a href="#">Cart</a></li>
         <li><a href="#">Admin</a></li>
         <li><a href="#">User Login</a></li>
@@ -39,18 +39,9 @@
 </nav>
 
 <section>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-    <div class="container1">
+
+    <div class="container1" style="padding-top: 200px;">
 
         <h1m class="text-center" >Categories</h1m><br/>
         <br/><br/>
