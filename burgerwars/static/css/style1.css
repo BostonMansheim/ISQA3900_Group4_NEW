@@ -105,6 +105,7 @@ section{
 .user-placeholder {
     width: 100px;
     height: 105px;
+    outline: 2px solid #000000;
 }
 
 .aboutName {
@@ -131,4 +132,8 @@ section{
     margin-right: 10%;
     width: 272px;
     height: 272px;
+}
+
+.opacity-text-background {
+    background-color: rgba(0, 0, 0, 0.6);
 }
