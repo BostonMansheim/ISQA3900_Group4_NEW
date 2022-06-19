@@ -11,3 +11,7 @@ def home(request):
 
 def about(request):
     return render(request, 'burgerwars/about.html', {'burgerwars': about})
+
+
+def bwmenucat(request):
+    return render(request, 'burgerwars/bwmenucat.html', {'burgerwars': bwmenucat})
