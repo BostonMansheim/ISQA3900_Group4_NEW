@@ -35,7 +35,7 @@ nav{
     background: rgba(0,0,0,0.6);
     border-bottom: 1px solid #fff;
 }
-nav .logo{
+nav .logoa{
     padding: 22px 20px;
     height: 80px;
     float: left;
@@ -71,5 +71,8 @@ section{
     background: url(backhomepage.png);
     background-size: cover;
     background-position: center;
+    margin: 0 auto;
+    padding: 1%;
+    text-align: center;
 }
 
