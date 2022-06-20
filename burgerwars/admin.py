@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Customer, Address, Payment, Topping, Product, Cart, Item
 
+"""
 # Register your models here.
 class CustomerList(admin.ModelAdmin):
     list_display = ()
@@ -58,3 +59,12 @@ admin.site.register(Topping, ToppingList)
 admin.site.register(Product, ProductList)
 admin.site.register(Cart, CartList)
 admin.site.register(Item, ItemList)
+"""
+
+admin.site.register(Customer)
+admin.site.register(Address)
+admin.site.register(Payment)
+admin.site.register(Topping)
+admin.site.register(Product)
+admin.site.register(Cart)
+admin.site.register(Item)
