@@ -23,7 +23,7 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../ISQA3900_Group4_NEW\templates" />
+        <option value="$MODULE_DIR$/burgerwars/templates" />
       </list>
     </option>
   </component>
