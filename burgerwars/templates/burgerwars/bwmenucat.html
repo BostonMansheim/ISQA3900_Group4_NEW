@@ -45,14 +45,14 @@
 
         <h1m class="text-center" >Categories</h1m><br/>
         <br/><br/>
-        <a href="burgeritems.html">
+        <a href="{% url 'burgerwars:burgeritems' %}">
             <div class="box-3 float-container">
                 <img src="../../static/css/imagesaver.png" width="200" height="150" alt="Cappuccino" class="img-responsive img-curve">
 
                 <h3 class="float-text text-white">Burger</h3>
             </div>
         </a>
-        <a href="drinkitems.html">
+        <a href="{% url 'burgerwars:drinkitems' %}">
             <div class="box-3 float-container">
                 <img src="../../static/css/imagesaver.png" width="200" height="150" alt="Breakfast" class="img-responsive img-curve">
 
@@ -60,7 +60,7 @@
             </div>
         </a>
 
-        <a href="appetitems.html">
+        <a href="{% url 'burgerwars:appetitems' %}">
             <div class="box-3 float-container">
                 <img src="../../static/css/imagesaver.png" width="200" height="150" alt="Lunch" class="img-responsive img-curve">
 

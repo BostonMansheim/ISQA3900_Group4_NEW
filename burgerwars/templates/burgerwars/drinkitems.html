@@ -25,17 +25,17 @@
 </head>
 <body>
 
-<nav>
-  <div class="logoa"><h1>Burger Wars </h1></div>
-  <ul>
-    <li><a href="home.html">Home</a></li>
-    <li><a href="bwmenucat.html">Menu</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Cart</a></li>
-    <li><a href="/admin">Admin</a></li>
-    <li><a href="#">User Login</a></li>
-    <!--            <li><a href="#">Feedback</a></li> -->
-  </ul>
+<nav class="about">
+    <div class="logoa"><h1>Burger Wars </h1></div>
+    <ul>
+        <li><a href="{% url 'burgerwars:home' %}">Home</a></li>
+        <li><a href="{% url 'burgerwars:bwmenucat' %}">Menu</a></li>
+        <li><a href="{% url 'burgerwars:about' %}">About</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="/admin">Admin</a></li>
+        <li><a href="#">User Login</a></li>
+        <!--            <li><a href="#">Feedback</a></li> -->
+    </ul>
 </nav>
 
 <section>

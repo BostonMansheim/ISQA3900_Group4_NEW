@@ -15,3 +15,15 @@ def about(request):
 
 def bwmenucat(request):
     return render(request, 'burgerwars/bwmenucat.html', {'burgerwars': bwmenucat})
+
+
+def drinkitems(request):
+    return render(request, 'burgerwars/drinkitems.html', {'burgerwars': drinkitems})
+
+
+def burgeritems(request):
+    return render(request, 'burgerwars/burgeritems.html', {'burgerwars': burgeritems})
+
+
+def appetitems(request):
+    return render(request, 'burgerwars/appetitems.html', {'burgerwars': appetitems})
