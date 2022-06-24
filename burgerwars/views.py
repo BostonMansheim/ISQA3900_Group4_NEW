@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render#, get_object_or_404
 from django.shortcuts import redirect
+from .models import *
 # Create your views here.
 
 
@@ -18,12 +19,15 @@ def bwmenucat(request):
 
 
 def drinkitems(request):
-    return render(request, 'burgerwars/drinkitems.html', {'burgerwars': drinkitems})
+    product = Product.objects.filter()
+    return render(request, 'burgerwars/drinkitems.html', {'products': product})
 
 
 def burgeritems(request):
-    return render(request, 'burgerwars/burgeritems.html', {'burgerwars': burgeritems})
+    product = Product.objects.filter()
+    return render(request, 'burgerwars/burgeritems.html', {'products': product})
 
 
 def appetitems(request):
-    return render(request, 'burgerwars/appetitems.html', {'burgerwars': appetitems})
+    product = Product.objects.filter()
+    return render(request, 'burgerwars/appetitems.html', {'products': product})
