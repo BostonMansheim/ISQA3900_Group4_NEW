@@ -141,3 +141,28 @@ section{
 section.fixed {
     background-attachment: fixed;
 }
+
+.order-btn {
+    margin-top: 6px;
+    background-color: #0d6bb8;
+    padding: 3px 7px;
+    transition: .3s;
+}
+
+.order-btn:hover {
+    background-color: #0d6bb8;
+    opacity: .8;
+}
+
+.product-name {
+    margin: 0;
+}
+
+.food-price {
+    line-height: 20px;
+}
+
+.h1-category {
+    color: #ffffff;
+    font-size: 60px;
+}
