@@ -47,7 +47,6 @@
   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
   <div class="container">
-    <h2><a href="{% url 'burgerwars:bwmenucat' %}" class="text-white">Menu</a></h2>
   </div>
 
 
@@ -69,7 +68,7 @@
                         <h4>{{ product.product_name }}</h4>
                         <p class="food-price">${{ product.product_price }}</p>
                         <br>
-                        <a href="#" class="btn btn-primary">Order Now</a>
+                        <a href="{% url 'burgerwars:itemdetails' pk=product.pk %}" class="btn btn-primary">Order Now</a>
                     </div>
                 </div>
             {% endif %}

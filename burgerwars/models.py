@@ -30,20 +30,12 @@ class Payment(models.Model):
         return str(self.payment_nameCard)
 
 
-class Topping(models.Model):
-    topping_name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return str(self.topping_name)
-
-
 class Product(models.Model):
     product_name = models.CharField(max_length=50)
     product_price = models.DecimalField(max_digits=10, decimal_places=2)
     product_description = models.TextField()
     product_image = models.ImageField(max_length=200)
     product_type = models.CharField(max_length=6)
-    product_toppings = models.ManyToManyField(Topping)
 
     def __str__(self):
         return str(self.product_name)
@@ -61,7 +53,6 @@ class Cart(models.Model):
 class Item(models.Model):
     item_product = models.ForeignKey(Product, on_delete=models.CASCADE)
     item_cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
-    topping_item = models.ManyToManyField(Topping)
 
     def __str__(self):
         return str(self.item_product)
