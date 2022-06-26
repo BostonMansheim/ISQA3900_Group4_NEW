@@ -2,6 +2,8 @@ from django.http import HttpResponse
 from django.shortcuts import render#, get_object_or_404
 from django.shortcuts import redirect
 from .models import *
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, get_object_or_404
 # Create your views here.
 
 
@@ -31,3 +33,9 @@ def burgeritems(request):
 def appetitems(request):
     product = Product.objects.filter()
     return render(request, 'burgerwars/appetitems.html', {'products': product})
+
+
+from django.views import generic
+
+class itemdetails(generic.DetailView):
+    model = Product

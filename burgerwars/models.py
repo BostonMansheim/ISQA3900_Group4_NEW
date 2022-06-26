@@ -43,6 +43,7 @@ class Product(models.Model):
     product_description = models.TextField()
     product_image = models.ImageField(max_length=200)
     product_type = models.CharField(max_length=6)
+    product_toppings = models.ManyToManyField(Topping)
 
     def __str__(self):
         return str(self.product_name)

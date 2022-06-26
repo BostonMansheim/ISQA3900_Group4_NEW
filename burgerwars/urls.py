@@ -1,6 +1,8 @@
 
 from . import views
 from django.urls import path, re_path
+from django.urls import path
+from . import views
 
 app_name = 'burgerwars'
 urlpatterns = [
@@ -11,4 +13,5 @@ urlpatterns = [
     path('drinkitems', views.drinkitems, name='drinkitems'),
     path('burgeritems', views.burgeritems, name='burgeritems'),
     path('appetitems', views.appetitems, name='appetitems'),
+    path('itemdetails/<int:pk>', views.itemdetails.as_view(), name='itemdetails'),
 ]
