@@ -41,19 +41,15 @@ class Product(models.Model):
         return str(self.product_name)
 
 
-class Cart(models.Model):
-    cart_customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    cart_payment = models.ForeignKey(Payment, on_delete=models.CASCADE)
-    cart_address = models.ForeignKey(Address, on_delete=models.CASCADE)
+class Checkout(models.Model):
+    checkout_customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    checkout_payment = models.ForeignKey(Payment, on_delete=models.CASCADE)
+    checkout_address = models.ForeignKey(Address, on_delete=models.CASCADE)
+    checkout_product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
     def __str__(self):
-        return str(self.cart_customer)
+        return str(self.checkout_customer)
 
 
-class Item(models.Model):
-    item_product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    item_cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
 
-    def __str__(self):
-        return str(self.item_product)
 

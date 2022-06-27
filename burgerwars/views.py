@@ -4,6 +4,7 @@ from django.shortcuts import redirect
 from .models import *
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
+from .forms import *
 # Create your views here.
 
 
@@ -35,7 +36,23 @@ def appetitems(request):
     return render(request, 'burgerwars/appetitems.html', {'products': product})
 
 
+@login_required
+def checkout(request):
+   if request.method == "POST":
+       form = CheckoutForm(request.POST)
+       if form.is_valid():
+           checkout = form.save(commit=False)
+           checkout.save()
+           return render(request, '#')
+   else:
+       form = CheckoutForm()
+
+   return render(request, 'burgerwars/checkout.html', {'form': form})
+
+
 from django.views import generic
 
 class itemdetails(generic.DetailView):
     model = Product
+
+
