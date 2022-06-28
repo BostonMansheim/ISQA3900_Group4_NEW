@@ -5,6 +5,8 @@ from .models import *
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
 from .forms import *
+
+from django.db.models.query import *
 # Create your views here.
 
 
@@ -37,8 +39,9 @@ def appetitems(request):
 
 
 @login_required
-def checkout(request):
+def checkout(request, product_key):
    if request.method == "POST":
+       product = product_key
        form = CheckoutForm(request.POST)
        if form.is_valid():
            checkout = form.save(commit=False)
@@ -46,8 +49,11 @@ def checkout(request):
            return render(request, '#')
    else:
        form = CheckoutForm()
-
-   return render(request, 'burgerwars/checkout.html', {'form': form})
+   for i in Product.objects.all().filter(id=product_key):
+    productName = i.product_name
+    productPrice = i.product_price
+    productImage = i.product_image
+   return render(request, 'burgerwars/checkout.html', {'form': form, 'productName': productName, 'productPrice': productPrice, 'productImage': productImage, 'productID': product_key})
 
 
 from django.views import generic

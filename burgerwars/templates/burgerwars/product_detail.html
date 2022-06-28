@@ -35,7 +35,7 @@
                 <p class="content-text">
                     {{ product.product_description }}
                 </p>
-                <a href="{% url 'burgerwars:checkout' %}" class="btn btn-primary order-btn">Order Now</a>
+                <a href="{% url 'burgerwars:checkout' product_key=product.pk %}" class="btn btn-primary order-btn">Order Now</a>
             </div>
         </div>
     </div>
