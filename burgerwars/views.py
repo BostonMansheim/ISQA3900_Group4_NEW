@@ -41,7 +41,6 @@ def appetitems(request):
 @login_required
 def checkout(request, product_key):
    if request.method == "POST":
-       product = product_key
        form = CheckoutForm(request.POST)
        if form.is_valid():
            checkout = form.save(commit=False)
@@ -61,4 +60,7 @@ from django.views import generic
 class itemdetails(generic.DetailView):
     model = Product
 
+
+def confirmation(request):
+    return render(request, 'burgerwars/confirmation.html')
 

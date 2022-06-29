@@ -35,46 +35,52 @@
       </div>
     </div>
     <div class="checkout_form">
+      <form action="" method="post">
+
 <!--      <p>Payment Section</p> -->
       <div class="details">
         <div class="sectionc">
-          <input type="text" placeholder="Cardholder name">
+          <input type="text" placeholder="Cardholder name" name="name">
         </div>
 
         <div class="sectionc">
-          <input type="text" placeholder="email address">
+          <input type="text" placeholder="email address" name="email">
         </div>
 
         <div class="sectionc">
-          <input type="text" placeholder="delivery adress">
+          <input type="text" placeholder="delivery address" name="address">
         </div>
 
         <div class="sectionc">
-          <input type="text" placeholder="zip code">
+          <input type="text" placeholder="zip code" name="zip">
         </div>
 
         <div class="sectionc">
-          <input type="text" placeholder="Card number">
+          <input type="text" placeholder="Card number" name="card">
         </div>
         <div class="sectionc last_sectionc">
 
 
           <div class="item">
-            <input type="text" placeholder="Expire Date">
+            <input type="text" placeholder="Expire Date" name="exp">
           </div>
 
           <div class="item">
-            <input type="text" placeholder="CVV">
+            <input type="text" placeholder="CVV" name="cvv">
           </div>
 
 
 
         </div>
 
+
+          <!--<input type="submit">-->
         <div class="btn">
-          <a href="#">Pay</a>
+          <a href="{% url 'burgerwars:confirmation' %}">Pay</a>
         </div>
+
       </div>
+      </form>
     </div>
   </div>
 
