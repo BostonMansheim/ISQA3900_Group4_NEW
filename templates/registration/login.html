@@ -17,7 +17,7 @@
 
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
-    <table>
+    <table style="margin-bottom: 10px; color: #ffffff;">
       <tr>
         <td>{{ form.username.label_tag }}</td>
         <td>{{ form.username }}</td>
@@ -27,7 +27,7 @@
         <td>{{ form.password }}</td>
       </tr>
     </table>
-    <input type="submit" value="login" />
+    <input type="submit" value="Login" style="padding: 9px 12px; margin-left: auto; margin-right: auto;"/>
     <input type="hidden" name="next" value="{{ next }}" />
   </form>
 
