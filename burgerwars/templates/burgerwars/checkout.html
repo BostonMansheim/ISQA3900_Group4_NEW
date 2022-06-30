@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,16 +22,15 @@
   </ul>
 </nav>
 
-
-
-
 <div class="wrapper">
   <div class="checkout_wrapper">
     <div class="product_info">
-      <img src="logoburger1.png" alt="product" >
-      <div class="content">
-        <h3>{{ productName }}<br/>{{ productPrice }}<br/>{{ productImage }}<br/>{{ productID }}</h3>
-        <h3>Burger <br/>Wars</h3>
+      <img src="{% static "images/" %}{{ productImage }}" alt="product" style="max-width: 220px; margin: 10px 10px 0px 10px; border-radius: 10px;">
+      <div class="content" style="color: #ffffff;">
+          <h2>{{ productName }}</h2>
+          <h4 style="margin-top: 10px;">${{ productPrice }}</h4>
+          <p class="checkout-text">Product ID:{{ productID }}</p>
+          <img src="{% static "images/burgerWarsFont.png" %}" style="margin: 0;">
 <!--        <p>$50</p> -->
       </div>
     </div>
