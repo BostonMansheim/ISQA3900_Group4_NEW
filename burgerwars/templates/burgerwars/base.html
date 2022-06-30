@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../static/css/style1.css" type="text/css">
 
 
-<!--    <link rel="stylesheet" href="../../static/css/style1.css"> -->
+    <link rel="stylesheet" href="../../static/css/style1.css">
 
 </head>
 <body>
@@ -29,17 +29,12 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Cart</a></li>
         <li><a href="/admin">Admin</a></li>
-        <li><a href="{% url 'login'%}?next={{request.path}}">User Login</a></li>
+        <li><a href="#">User Login</a></li>
         <!--            <li><a href="#">Feedback</a></li> -->
     </ul>
 </nav>
 
-
-<section class="wrapper">
-    {% block content %}
-        {% endblock %}
-
-</section>
+<section></section>
 
 </body>
 </html>
