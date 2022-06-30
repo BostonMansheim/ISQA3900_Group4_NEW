@@ -83,13 +83,7 @@ body{
   margin-bottom: 15px;
 }
 
-.checkout_form .details .sectionc input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid #dddddd;
-}
-
-.checkout_form .details .sectionc input[type="email"] {
+.checkout_form .details .sectionc input[type="text"]{
   width: 100%;
   padding: 10px;
   border: 2px solid #dddddd;
@@ -98,11 +92,6 @@ body{
 .checkout_form .details .sectionc input[type="text"]:focus{
   border: 2px solid #e85c4d;
 }
-
-.checkout_form .details .sectionc input[type="email"]:focus{
-  border: 2px solid #e85c4d;
-}
-
 
 .checkout_form .details .sectionc.last_sectionc{
   display: flex;

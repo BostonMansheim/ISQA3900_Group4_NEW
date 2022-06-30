@@ -14,5 +14,7 @@ urlpatterns = [
     path('burgeritems', views.burgeritems, name='burgeritems'),
     path('appetitems', views.appetitems, name='appetitems'),
     path('itemdetails/<int:pk>', views.itemdetails.as_view(), name='itemdetails'),
-    path('checkout/?<int:product_key>', views.checkout, name='checkout')
+    path('checkout/?<int:product_key>', views.checkout, name='checkout'),
+    path('confirmation', views.confirmation, name='confirmation'),
+
 ]

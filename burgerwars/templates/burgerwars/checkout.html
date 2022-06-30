@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- {% load static %} -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +16,7 @@
     <li><a href="{% url 'burgerwars:bwmenucat' %}">Menu</a></li>
     <li><a href="{% url 'burgerwars:about' %}">About</a></li>
     <li><a href="/admin">Admin</a></li>
-    <li><a href="#">User Login</a></li>
+    <li><a href="{% url 'login'%}?next={{request.path}}">User Login</a></li>
     <!--            <li><a href="#">Feedback</a></li> -->
   </ul>
 </nav>
@@ -28,60 +27,60 @@
 <div class="wrapper">
   <div class="checkout_wrapper">
     <div class="product_info">
-      <img src="{% static "images/" %}{{ productImage }}" alt="product" class="checkout-image" style="max-width: 220px; margin: 8px 10px 2px 10px; border-radius: 5px;">
-      <div class="content" style="margin-top: 10px;">
-          <h2>{{ productName }}</h2>
-          <h4 style="margin-top: 6px;">${{ productPrice }}</h4>
-          <p class="checkout-description">Product ID: {{ productID }}</p>
-          <img src="{% static "images/burgerWarsFont.png" %}" style="margin: 10px 0px 0px 0px;">
+      <img src="logoburger1.png" alt="product" >
+      <div class="content">
+        <h3>{{ productName }}<br/>{{ productPrice }}<br/>{{ productImage }}<br/>{{ productID }}</h3>
+        <h3>Burger <br/>Wars</h3>
 <!--        <p>$50</p> -->
       </div>
     </div>
     <div class="checkout_form">
+      <form action="" method="post">
+
 <!--      <p>Payment Section</p> -->
       <div class="details">
         <div class="sectionc">
-          <input type="text" placeholder="Cardholder name">
+          <input type="text" placeholder="Cardholder name" name="name">
         </div>
 
         <div class="sectionc">
-          <input type="email" placeholder="email address" id="recipient_email" name="recipient_email_address">
+          <input type="text" placeholder="email address" name="email">
         </div>
 
         <div class="sectionc">
-          <input type="text" placeholder="delivery adress">
+          <input type="text" placeholder="delivery address" name="address">
         </div>
 
         <div class="sectionc">
-          <input type="text" placeholder="zip code">
+          <input type="text" placeholder="zip code" name="zip">
         </div>
 
         <div class="sectionc">
-          <input type="text" placeholder="Card number">
+          <input type="text" placeholder="Card number" name="card">
         </div>
         <div class="sectionc last_sectionc">
 
 
           <div class="item">
-            <input type="text" placeholder="Expire Date">
+            <input type="text" placeholder="Expire Date" name="exp">
           </div>
 
           <div class="item">
-            <input type="text" placeholder="CVV">
+            <input type="text" placeholder="CVV" name="cvv">
           </div>
 
 
 
         </div>
 
+
+          <!--<input type="submit">-->
         <div class="btn">
-          <a href="#">Pay</a>
+          <a href="{% url 'burgerwars:confirmation' %}">Pay</a>
         </div>
-          <form method="post">
-              {% csrf_token %}
-              <div class="btn"><button type="submit">Submit</button></div>
-          </form>
+
       </div>
+      </form>
     </div>
   </div>
 
