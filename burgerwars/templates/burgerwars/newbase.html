@@ -23,10 +23,18 @@
     </ul>
 </nav>
 <section class="fixed">
-    <div class="order confirmation" style="padding-top: 150px;">
-        <h1>Your order has been confirmed!</h1>
+    <div class="row about-content" style="padding-top: 150px;">
+        <div class="col-md-6 padding-left" style="max-height: 100%;">
+            <div class="about-text">
+                <h1 class="white-text">Log in</h1>
+    {% block content %}
+        {% endblock %}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img class="placeholder-image" src="{% static "images/burgerWarsFont.png" %}">
+        </div>
     </div>
-
 </section>
 </body>
 </html>

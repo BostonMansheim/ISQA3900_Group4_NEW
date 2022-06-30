@@ -5,7 +5,8 @@ from .models import *
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
 from .forms import *
-
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
 from django.db.models.query import *
 # Create your views here.
 
