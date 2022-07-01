@@ -8,6 +8,9 @@ from .forms import *
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from django.db.models.query import *
+from django.shortcuts import render
+from .forms import ContactForm
+from django.core.mail import send_mail
 # Create your views here.
 
 
@@ -64,4 +67,20 @@ class itemdetails(generic.DetailView):
 
 def confirmation(request):
     return render(request, 'burgerwars/confirmation.html')
+
+
+def contact(request):
+    form = ContactForm(request.POST)
+    if form.is_valid():
+        subject = form.cleaned_data['subject']
+        message = form.cleaned_data['message']
+        sender = form.cleaned_data['sender']
+        cc = form.cleaned_data['cc']
+        recipients = ['sender@example.com']
+        recipients.append(sender)
+        send_mail(subject, message, sender, recipients)
+        return HttpResponseRedirect('/thanks/')
+    else:
+        form = ContactForm()
+        return render(request,'/templates/checkout.html',{'form':form})
 

@@ -36,15 +36,9 @@
     </div>
     <div class="checkout_form">
       <form action="" method="post">
-
-<!--      <p>Payment Section</p> -->
       <div class="details">
         <div class="sectionc">
           <input type="text" placeholder="Cardholder name" name="name">
-        </div>
-
-        <div class="sectionc">
-          <input type="text" placeholder="email address" name="email">
         </div>
 
         <div class="sectionc">
@@ -68,25 +62,25 @@
           <div class="item">
             <input type="text" placeholder="CVV" name="cvv">
           </div>
-
-
-
         </div>
 
 
-          <!--<input type="submit">-->
-        <div class="btn">
-          <a href="{% url 'burgerwars:confirmation' %}">Pay</a>
-        </div>
 
+        <form method="POST" class="post-form" action="{% url 'burgerwars:confirmation' %}">
+            {% csrf_token %}
+            <div class="sectionc">
+                <input type="text" placeholder="email address" name="email">
+            </div>
+              <!--<input type="submit">-->
+            <div class="btn">
+              <a href="{% url 'burgerwars:confirmation' %}">Pay</a>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form>
       </div>
       </form>
     </div>
   </div>
-
-
-
 </div>
-
 </body>
 </html>
