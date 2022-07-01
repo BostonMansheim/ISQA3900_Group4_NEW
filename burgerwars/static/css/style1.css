@@ -206,37 +206,37 @@ nav {
 }
 
 .contact-btn {
-    padding: 11px 10px !important;
-    background-color: #ffffff !important;
+    padding: 11px 10px;
+    background-color: #ffffff;
 }
 
 .spacing {
-    min-width: 100% !important;
-    min-height: 10px !important;
+    min-width: 100%;
+    min-height: 10px;
 }
 
 .contact-buttons {
-    margin-top: 14px !important;
+    margin-top: 14px;
 }
 
 .contact-header {
-    color: #ffffff !important;
+    color: #ffffff;
 }
 
 .feedback-button {
-    padding-top: 70px !important;
+    padding-top: 70px;
 }
 
 .about-button {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    background-color: rgba(0, 0, 0, 0.6) !important;
-    transition: .5s !important;
-    padding: 6px 10px !important;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: .5s;
+    padding: 6px 10px;
 }
 
 .about-button:hover {
-    text-decoration: none !important;
-    color: #000000 !important;
-    background-color: rgba(255, 255, 255, 0.6) !important;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.6);
 }
