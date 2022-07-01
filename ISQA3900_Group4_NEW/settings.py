@@ -118,7 +118,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = "/home/bostonmansheim/myproject/static/"
+MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "burgerwars" / "static" / "images"
 
 LOGIN_REDIRECT_URL = '/'
