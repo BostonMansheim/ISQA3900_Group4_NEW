@@ -16,5 +16,6 @@ urlpatterns = [
     path('itemdetails/<int:pk>', views.itemdetails.as_view(), name='itemdetails'),
     path('checkout/?<int:product_key>', views.checkout, name='checkout'),
     path('confirmation', views.confirmation, name='confirmation'),
+    path('feedback', views.feedback, name='feedback'),
 
 ]

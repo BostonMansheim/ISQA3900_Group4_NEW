@@ -24,6 +24,9 @@ def home(request):
 def about(request):
     return render(request, 'burgerwars/about.html', {'burgerwars': about})
 
+def feedback(request):
+    return render(request, 'burgerwars/feedback.html', {'burgerwars': feedback})
+
 
 def bwmenucat(request):
     return render(request, 'burgerwars/bwmenucat.html', {'burgerwars': bwmenucat})
@@ -88,15 +91,3 @@ def confirmation(request):
 #     else:
 #         form = ContactForm()
 #         return render(request,'/templates/checkout.html',{'form':form})
-
-
-def send_email(request):
-    subject = '{}, Burger Wars Order Confirmation'
-    message = 'Your Burger Wars order has been confirmed.'
-    user = request.user
-    user_email = user.email
-    try:
-        send_mail(subject, message, 'yourEmailAddress@gmail.com', [user_email])
-        sent = True
-    except:
-        print("Error sending e-mail")

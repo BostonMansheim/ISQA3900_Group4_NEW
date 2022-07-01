@@ -39,21 +39,10 @@
             <img class="placeholder-image" src="{% static "images/burgerWarsFont.png" %}">
         </div>
     </div>
-    <div class="contact-form opacity-text-background">
-        <form action="https://formsubmit.co/burgerwarsdjango@gmail.com" method="post" enctype="text/plain" class="contactForm">
-            <h3 class="contact-header">Send Feedback</h3>
-            <p class="contact-form-text">Name:</p>
-            <input type="text" name="name" size="50" required><br>
-            <p class="contact-form-text">E-mail:</p>
-            <input type="text" name="mail" size="50" required><br>
-            <p class="contact-form-text">Comment:</p>
-            <input type="text" name="comment" size="50" required><br><br>
-            <div class="contact-buttons">
-                <input type="submit" value="Send" class="contact-btn">
-                <input type="reset" value="Reset" class="contact-btn">
-            </div>
-        </form>
+    <div class="feedback-button">
+        <a href="{% url 'burgerwars:feedback' %}" class="about-button">Feedback</a>
     </div>
+
 {#    <h1 class="white-text" style="text-align:center; padding: 60px 0px; margin-top: 20px;">Meet the Development Team</h1>#}
 {#    <div class="row">#}
 {#        <div class="col-md-1"></div>#}
