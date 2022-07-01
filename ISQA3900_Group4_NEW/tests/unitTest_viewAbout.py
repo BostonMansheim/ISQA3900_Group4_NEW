@@ -42,6 +42,11 @@ class ll_ATS(unittest.TestCase):
         elem.send_keys(Keys.RETURN)
         time.sleep(3)  # pause to allow screen to load
 
+        elem = driver.find_element(By.XPATH, '/html/body/nav/ul/li[3]/a')
+        elem.send_keys(Keys.RETURN)
+
+        time.sleep(3)
+
 
         try:
             # verify drinks menu exist
