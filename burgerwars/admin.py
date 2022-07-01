@@ -62,8 +62,8 @@ admin.site.register(Item, ItemList)
 """
 
 admin.site.register(Customer)
-admin.site.register(Address)
-admin.site.register(Payment)
+#admin.site.register(Address)
+#admin.site.register(Payment)
 admin.site.register(Product)
-admin.site.register(Checkout)
+#admin.site.register(Checkout)
 
