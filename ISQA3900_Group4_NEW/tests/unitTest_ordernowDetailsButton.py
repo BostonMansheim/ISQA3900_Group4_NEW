@@ -51,10 +51,14 @@ class ll_ATS(unittest.TestCase):
         elem.send_keys(Keys.RETURN)
         time.sleep(3)  # pause to allow screen to change
 
+        elem = driver.find_element(By.XPATH, '/html/body/section/div[2]/div[1]/div[2]/a')
+        elem.send_keys(Keys.RETURN)
+        time.sleep(3)  # pause to allow screen to change
+
         try:
             # verify order button exists on new screen after clicking "Customers" button
             elem = driver.find_element(By.XPATH,
-                                       '/html/body/section/div[2]/div[1]/div[2]/a')
+                                       '/html/body/section/div/div[2]/div/a')
             elem.send_keys(Keys.RETURN)
             print("Test passed - ordernow details are displayed")
             assert True
