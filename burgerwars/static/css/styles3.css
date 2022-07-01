@@ -89,7 +89,17 @@ body{
   border: 2px solid #dddddd;
 }
 
+.checkout_form .details .sectionc input[type="email"]{
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #dddddd;
+}
+
 .checkout_form .details .sectionc input[type="text"]:focus{
+  border: 2px solid #e85c4d;
+}
+
+.checkout_form .details .sectionc input[type="email"]:focus{
   border: 2px solid #e85c4d;
 }
 

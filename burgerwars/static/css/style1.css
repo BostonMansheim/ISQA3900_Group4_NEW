@@ -190,3 +190,35 @@ nav {
     padding: 14px 0px;
     color: #ffffff;
 }
+
+.contact-form {
+    margin-top: 40px;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px;
+}
+
+.contact-form-text {
+    color: #ffffff;
+    line-height: 16px;
+    margin: 6px 0px;
+}
+
+.contact-btn {
+    padding: 11px 10px;
+    background-color: #ffffff;
+}
+
+.spacing {
+    min-width: 100%;
+    min-height: 10px;
+}
+
+.contact-buttons {
+    margin-top: 14px;
+}
+
+.contact-header {
+    color: #ffffff;
+}

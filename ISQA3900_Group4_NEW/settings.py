@@ -124,3 +124,9 @@ MEDIA_ROOT = BASE_DIR / "burgerwars" / "static" / "images"
 LOGIN_REDIRECT_URL = '/'
 
 LOGIN_URL = 'login'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'burgerwarsdjango@gmail.com'
+EMAIL_HOST_PASSWORD = 'Xii8qJf6TrQ?i89d'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
